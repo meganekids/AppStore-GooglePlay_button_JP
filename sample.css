@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .store-btn-area {
-  margin: 60px auto;
+  margin: 30px auto;
   text-align: center;
 }
 
@@ -43,7 +43,6 @@
   display: block;
   background-position: center center;
   background-color: #000;
-  width: 280px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
   .store-btn-area a.btn-google-play {
