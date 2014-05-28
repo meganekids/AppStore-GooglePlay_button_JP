@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+@mixin image-retina($file, $type, $width, $height) {
+  background: url($file + '.' + $type) no-repeat;
+  width: $width;
+  height: $height;
+  text-indent:-9876px;
+  display: block;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    & {
+      background-image: url($file + '@2x.' + $type);
+      @include background-size($width $height);
+    }
+  }
+}
+
+//ダウンロード ボタン
+.store-btn-area{
+  text-align: center;
+  a{
+    margin: 0 auto;
+    padding: 10px 0;
+    @include border-radius(10px);
+    text-align: center;
+    &.btn-app-store{
+      @include image-retina(/img/btn-app-store, png, 280px, 50px);
+      background-position: center center;
+      background-color: #000;
+    }
+    &.btn-google-play{
+      @include image-retina(/img/btn-google-play, png, 280px, 50px);
+      background-position: center center;
+      background-color: #000;
+      width: 280px;
+    }
+    &:hover{
+      background-color: #666;
+    }
+  }
+}
