@@ -24,15 +24,17 @@
     @include border-radius(10px);
     text-align: center;
     &.btn-app-store{
-      @include image-retina(/img/btn-app-store, png, 280px, 50px);
+      @include image-retina(/img/btn-app-store, png, 178px, 50px);
       background-position: center center;
       background-color: #000;
+      width: 300px;
+    }
     }
     &.btn-google-play{
-      @include image-retina(/img/btn-google-play, png, 280px, 50px);
+      @include image-retina(/img/btn-google-play, png, 178px, 50px);
       background-position: center center;
       background-color: #000;
-      width: 280px;
+      width: 300px;
     }
     &:hover{
       background-color: #666;
